@@ -6,7 +6,6 @@
   
 }
 body{
-    /* background-color: rgb(192, 192, 192); */
     background-color: rgb(41, 41, 41);
     transition: all ease 0.5s;
 }
@@ -14,29 +13,32 @@ body{
     background-color: aliceblue;
     color: black;
 }
-.light #home h1{
+.light h1{
     color: black;
 }
-.light #projects h1{
+.light #navbar h1{
+    color: white;
+}
+.light #home h1{
     color: black;
 }
 .light #projects .col{
     color: black;
 }
-.light #contact h1{
-    color: black;
-}
 .light #contact i{
     color: black;
-}
-.light #about h2{
-    color: #111;
 }
 .light #about table tr th{
     color: #111;
 }
 .light #about table tr td{
     color: #111;
+}
+.light hr{
+    background-color: black;
+}
+.light footer hr{
+    background-color: white;
 }
 html{
     scroll-behavior: smooth;
@@ -192,74 +194,27 @@ html{
 }
 /* projects end */
 
-/* about start */
-#credits{
-    display: flex;
-    width: 100%;
-    padding-top: 100px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-#credits h1{
+/* Tabel start */
+#about{
+    padding-top:100px;
     width: 100%;
     display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: end;
-}
-#credits .col{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    box-sizing: border-box;
-    width: 600px;
-    background-color: white;
-    border-radius: 10px;
-    color: black;
-    padding: 10px;
-    margin: 10px;
     flex-direction: column;
-    font-weight: bolder;
+    align-items: center;
 }
-#credits .col h2{
-    color: black;
+#about table{
+    box-shadow: white;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
 }
-#credits .col h3{
-    color: black;
-    font-size: 20px;
-   
+#about table tr td{
+    color: white;
 }
-#credits .col h4{
-    color: black;
-    font-size: 20px;
-    font-style: italic;
+#about table tr tH{
+    color: white;
 }
-#credits .col .sosial a i{
-    color: black;
-    padding-left: 10px;
-    font-size: 25px;
-    padding-top: 10px;
-}
-#credits .col .sosial a.wa i:hover{
-    color: green;
-    transition: 0.5s;
-}
-#credits .col .sosial a.yt i:hover{
-    color: red;
-    transition: 0.5s;
-}
-#credits .col .sosial a.tele i:hover{
-    color: rgb(0, 191, 255);
-    transition: 0.5s;
-}
-#credits .col .sosial a.insta i:hover{
-    color: rgb(247, 3, 178);
-    transition: 0.5s;
-}
-
-/* about end */
+/* Table end */
 
 /* contact start */
 #contact {
@@ -273,6 +228,7 @@ html{
     align-items: center;
 }
 #contact form{
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -304,45 +260,58 @@ html{
 }
 
 /* contact end */
-/* Tabel start */
-#about{
-    padding-top:100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#about h2{
-    color: white;
-}
-#about table{
-    box-shadow: white;
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-}
-#about table tr td{
-    color: white;
-}
-#about table tr tH{
-    color: white;
-}
-/* Table end */
 
 /* footer start */
-footer {
-    flex-direction: column;
+footer{
+    text-align: center;
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+hr{
+    width: 200px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: white;
+    margin-bottom: 20px;
+}
+footer .container{
     display: flex;
-    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer .card{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    flex-direction: column;
+    width: 280px;
+    margin: 10px;
+    line-height: 25px;
+    border-radius: 10px;
+    height: 110px;
 }
-footer .copyright{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    background-color: black;
+footer .card h4{
+    text-align: center;
+}
+footer .card:hover{
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.3);
+    transition: all 0.5s linear;
+}
+footer .sosmed{
+    font-size: 30px;
+}
+footer .sosmed a.insta i:hover{
+    color: rgb(247, 3, 178);
+    transition: all 0.5s linear;
+}
+footer .sosmed a.git i:hover{
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: white;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
 }
 /* footer end */
 
@@ -354,7 +323,10 @@ footer .copyright{
         display: block;
     }
     #about table{
-        width: 400px;
+        width: 500px;
+    }
+    #gambar{
+        display: none;
     }
 }
 @media(max-width: 500px){
