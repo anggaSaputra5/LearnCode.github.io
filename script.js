@@ -44,4 +44,8 @@ menu.addEventListener("click", function(){
 
 kirim.addEventListener("click", function(){
     alert("Maaf pesan anda tidak terkirim karena kami belum bisa membuat fitur pengiriman, kami akan membuat fitur tersebut sesegera mungkin :)");
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 916974e56a5f51fd80f14e4efc6e52b2d480a810
