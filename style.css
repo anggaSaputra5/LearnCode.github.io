@@ -6,7 +6,6 @@
   
 }
 body{
-    /* background-color: rgb(192, 192, 192); */
     background-color: rgb(41, 41, 41);
     transition: all ease 0.5s;
 }
@@ -14,20 +13,32 @@ body{
     background-color: aliceblue;
     color: black;
 }
-.light #projects h1{
+.light h1{
+    color: black;
+}
+.light #navbar h1{
+    color: white;
+}
+.light #home h1{
     color: black;
 }
 .light #projects .col{
     color: black;
 }
-.light #contact h1{
-    color: black;
-}
 .light #contact i{
     color: black;
 }
-.light #about h1{
-    color: black;
+.light #about table tr th{
+    color: #111;
+}
+.light #about table tr td{
+    color: #111;
+}
+.light hr{
+    background-color: black;
+}
+.light footer hr{
+    background-color: white;
 }
 html{
     scroll-behavior: smooth;
@@ -40,6 +51,7 @@ html{
     background-color: #111;
     height: 100px;
     box-shadow: 1px 0px 10px rgba(255, 255, 255, 0.468);
+    z-index: 1;
 }
 #navbar .container{
     align-items: center;
@@ -47,7 +59,6 @@ html{
     display: flex;
     width: 90%;
     margin: auto;
-   
 }
 #navbar h1{
     width:100%;
@@ -69,16 +80,64 @@ html{
     border: white 2px solid;
     font-size: 18px; 
     color: white;
-   
+    cursor: pointer;
 }
 #navbar li a:hover{
     background-color: white;
     color: black;
     transition: all 0.5s linear;
     border-color: black;
-    
+}
+#navbar .menu{
+    display: none;
+    cursor: pointer;
+    font-size: 40px;
+}
+#light{
+    background-color: transparent;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
 }
 /* navbar end */
+
+/* sidebar start */
+#sidebar{
+    padding-top: 100px;
+    position: fixed;
+    width: 50%;
+    left: -60%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.673);
+}
+#sidebar ul{
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+#sidebar li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    height: 200px;
+}
+#sidebar li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+#light2{
+    font-size: 30px;
+}
+/* sidebar end */
 
 /* home start */
 #home {
@@ -143,74 +202,27 @@ html{
 }
 /* projects end */
 
-/* about start */
+/* Tabel start */
 #about{
-    display: flex;
-    width: 100%;
-    padding-top: 100px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-#about h1{
+    padding-top:100px;
     width: 100%;
     display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: end;
-}
-#about .col{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    box-sizing: border-box;
-    width: 600px;
-    background-color: white;
-    border-radius: 10px;
-    color: black;
-    padding: 10px;
-    margin: 10px;
     flex-direction: column;
-    font-weight: bolder;
+    align-items: center;
 }
-#about .col h2{
-    color: black;
+#about table{
+    box-shadow: white;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
 }
-#about .col h3{
-    color: black;
-    font-size: 20px;
-   
+#about table tr td{
+    color: white;
 }
-#about .col h4{
-    color: black;
-    font-size: 20px;
-    font-style: italic;
+#about table tr tH{
+    color: white;
 }
-#about .col .sosial a i{
-    color: black;
-    padding-left: 10px;
-    font-size: 25px;
-    padding-top: 10px;
-}
-#about .col .sosial a.wa i:hover{
-    color: green;
-    transition: 0.5s;
-}
-#about .col .sosial a.yt i:hover{
-    color: red;
-    transition: 0.5s;
-}
-#about .col .sosial a.tele i:hover{
-    color: rgb(0, 191, 255);
-    transition: 0.5s;
-}
-#about .col .sosial a.insta i:hover{
-    color: rgb(247, 3, 178);
-    transition: 0.5s;
-}
-
-/* about end */
+/* Table end */
 
 /* contact start */
 #contact {
@@ -223,58 +235,123 @@ html{
     justify-content: center;
     align-items: center;
 }
-#contact .sosmed {
+#contact form{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: blue;
+    height: 450px;
+    width: 400px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+#contact input{
+    width: 100%;
+    color: black;
+}
+#contact textarea{
+    width: 100%;
+    color: black;
+}
+#contact button{
+    background-color: transparent;
+    padding: 5px;
+    border-color: white;
+    cursor: pointer;
+}
+#contact button:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.5s linear;
+}
+
+/* contact end */
+
+/* footer start */
+footer{
+    text-align: center;
+    background-color: black;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+hr{
+    width: 200px;
+    height: 2px;
+    margin: 0 auto;
+    background-color: white;
+    margin-bottom: 20px;
+}
+footer .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+footer .card{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 280px;
+    margin: 10px;
+    line-height: 25px;
+    border-radius: 10px;
+    height: 110px;
+}
+footer .card h4{
+    text-align: center;
+}
+footer .card:hover{
+    box-shadow: 1px 1px 20px rgba(255, 255, 255, 0.3);
+    transition: all 0.5s linear;
+}
+footer .sosmed{
     font-size: 30px;
 }
-#contact .sosmed .wa i:hover{
-    -webkit-text-stroke: 0.4px;
-    -webkit-text-stroke-color: white;
-    color: green;
-    transition: 0.5s;
-    cursor: pointer;
+footer .sosmed a.insta i:hover{
+    color: rgb(247, 3, 178);
+    transition: all 0.5s linear;
 }
-#contact .sosmed .youtube i:hover{
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: white;
-    color: red;
-    transition: 0.5s;
-    cursor: pointer;
-}
-#contact .sosmed .tele i:hover{
-    -webkit-text-stroke: 1px;
-    -webkit-text-stroke-color: white;
-    color: rgb(0, 191, 255);
-    transition: 0.5s;
-    cursor: pointer;
-}
-#contact .sosmed .insta i:hover{
-    -webkit-text-stroke: 0.3px;
-    -webkit-text-stroke-color: white;
-    color: rgb(255, 0, 200);
-    transition: 0.5s;
-    cursor: pointer;
-}
-#contact .sosmed .github i:hover{
+footer .sosmed a.git i:hover{
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: white;
     color: rgb(0, 0, 0);
     transition: 0.5s;
-    cursor: pointer;
-}
-/* contact end */
-
-/* footer start */
-footer {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    background-color: #111;
 }
 /* footer end */
 
 @media(max-width: 768px){
     #navbar ul{
+        display: none;
+    }
+    #navbar button{
+        display: none;
+    }
+    #navbar .menu{
+        display: block;
+    }
+    #about table{
+        width: 500px;
+    }
+    #gambar{
+        display: none;
+    }
+}
+@media(max-width: 500px){
+    #home .word{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    #about table{
+        width: 300px;
+    }
+    #contact form{
+        width: 100%;
+    }
+    #gambar{
         display: none;
     }
 }
