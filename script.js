@@ -3,13 +3,31 @@ const light = document.querySelector("#light");
 const light2 = document.querySelector("#light2");
 const menu = document.querySelector(".menu");
 const sidebar = document.querySelector("#sidebar");
+const kirim = document.querySelector("#kirim");
 let nilai = 0;
+let dark = 0;
 
 light.addEventListener("click", function(){
     body.classList.toggle("light");
+    if(dark == 0){
+        light.innerHTML = '<button id="light"><i class="fa-solid fa-moon"></i></button>';
+        dark = 1;
+    }
+    else{ 
+        light.innerHTML = '<button id="light"><i class="fa-solid fa-sun"></i></button>';
+        dark = 0;
+    }
 });
 light2.addEventListener("click", function(){
     body.classList.toggle("light");
+    if(dark == 0){
+        light2.innerHTML = '<button id="light"><i class="fa-solid fa-moon"></i></button>';
+        dark = 1;
+    }
+    else{ 
+        light2.innerHTML = '<button id="light"><i class="fa-solid fa-sun"></i></button>';
+        dark = 0;
+    }
 });
 
 menu.addEventListener("click", function(){
@@ -22,4 +40,8 @@ menu.addEventListener("click", function(){
         sidebar.style.left = "-50%";
         nilai = 0;
     }
+});
+
+kirim.addEventListener("click", function(){
+    alert("Maaf pesan anda tidak terkirim karena kami belum bisa membuat fitur pengiriman, kami akan membuat fitur tersebut sesegera mungkin :)");
 });
