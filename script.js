@@ -1,3 +1,4 @@
+// mengambil item dari html
 const body = document.querySelector("body");
 const light = document.querySelector("#light");
 const light2 = document.querySelector("#light2");
@@ -7,6 +8,7 @@ const kirim = document.querySelector("#kirim");
 let nilai = 0;
 let dark = 0;
 
+// lightMode + merubah button
 light.addEventListener("click", function(){
     body.classList.toggle("light");
     if(dark == 0){
@@ -30,6 +32,7 @@ light2.addEventListener("click", function(){
     }
 });
 
+// animasi sidebar
 menu.addEventListener("click", function(){
     if( nilai == 0){
         sidebar.style.left = "0%";
@@ -42,6 +45,7 @@ menu.addEventListener("click", function(){
     }
 });
 
+// alert contact
 kirim.addEventListener("click", function(){
     alert("Maaf pesan anda tidak terkirim karena kami belum bisa membuat fitur pengiriman, kami akan membuat fitur tersebut sesegera mungkin :)");
 });

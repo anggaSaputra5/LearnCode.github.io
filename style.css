@@ -9,6 +9,11 @@ body{
     background-color: rgb(41, 41, 41);
     transition: all ease 0.5s;
 }
+html{
+    scroll-behavior: smooth;
+}
+
+/* lightMode start */
 .light{
     background-color: aliceblue;
     color: black;
@@ -40,9 +45,7 @@ body{
 .light footer hr{
     background-color: white;
 }
-html{
-    scroll-behavior: smooth;
-}
+/* lightMode end */
 
 /* navbar start */
 #navbar{
@@ -266,7 +269,6 @@ html{
     color: black;
     transition: all 0.5s linear;
 }
-
 /* contact end */
 
 /* footer start */
@@ -323,6 +325,7 @@ footer .sosmed a.git i:hover{
 }
 /* footer end */
 
+/* display start */
 @media(max-width: 768px){
     #navbar ul{
         display: none;
@@ -355,3 +358,4 @@ footer .sosmed a.git i:hover{
         display: none;
     }
 }
+/* display end */
